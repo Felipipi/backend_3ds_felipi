@@ -5,14 +5,14 @@
  * IMPRIMA COM console.log("NOME-PRODUTO: " + <variavel>)
  */
 let valor = 29.99         //number
-let nomeProduto = "calção"  //string
+let nome_produto = "calção"  //string
 const tamanho = "m"         //string
 const estampa = "tubarão"   //string
 const masculino = true      //boolean
 
 console.log(valor)
 
-console.log(nomeProduto)
+console.log(nome_produto)
 
 console.log(tamanho)
 
@@ -22,10 +22,11 @@ console.log(masculino)
 
 console.log(typeof valor)
 
-console.log(typeof nomeProduto)
+console.log(typeof nome_produto)
 
 console.log(typeof tamanho)
 
 console.log(typeof estampa)
 
 console.log(typeof masculino)
+
