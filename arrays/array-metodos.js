@@ -5,7 +5,7 @@ console.log(frutas.length)
 while (frutas.length > 0) {
     frutas.pop()
     if (frutas.length == 0) {
-        console.log("Não há frutas para vender")
+        console.log("Não há frutas para vender!!")
     }
 }
 console.log(frutas)
