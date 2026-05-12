@@ -1,5 +1,5 @@
+const mod_calc = require("./mod_calc")
 let health = 100
-
 function danoJogador(arma, dano) {
     if(health <= 0) {
         console.log('Jogador já está morto')
@@ -10,4 +10,6 @@ function danoJogador(arma, dano) {
 }
 }
 
-exports.danoJogador = danoJogador
+module.exports = {
+    danoJogador
+}
