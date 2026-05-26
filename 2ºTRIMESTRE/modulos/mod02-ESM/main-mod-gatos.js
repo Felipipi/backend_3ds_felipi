@@ -1,7 +1,13 @@
 
-import {banhoGato, tosaGato, alimentoGato} from './mod-gatos.js';
+// import {banhoGato, tosaGato, alimentoGato} from './mod-gatos.js';
 
-let racaViraLata = "Vira-Lata"
-console.log(banhoGato('Siamês', 'Completo'));
-console.log(tosaGato('Persa', 'Baixa'));
-console.log(alimentoGato('Angorá', 'Premium'));
+import * as petShop from './mod-gatos.js';
+
+//  * significa tudo, e 'as' é "como" com sentido  apelido
+
+
+console.log(petShop.alimentoGato('primeiro gato', 'peixe'));
+
+console.log(petShop.banhoGato('primeiro gato', 'completo'));
+
+console.log(petShop.tosaGato('primeiro gato', 'higienica'));
