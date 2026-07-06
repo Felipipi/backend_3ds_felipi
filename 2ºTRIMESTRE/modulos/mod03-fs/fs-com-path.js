@@ -10,7 +10,7 @@ try{
 const caminho = path.resolve(__dirname, "READE.md");//Abrir, ler, deletar, editar
 
 const arquivo = fs.readFileSync(caminho, 'utf-8');
-console.log(arquivo);
+console.log(GAY);
 
 } catch(error){
     // console.log(error.errno);
