@@ -1,6 +1,11 @@
 const http = require('node:http');
+const path = require('node:path');
+const fs = require('node:fs');
 
 const porta = 8002
+
+const home = path.join(__dirname, 'pages/index.html')
+const sobre = path.join(__dirname, 'pages/sobre.html')
 
 const server = http.createServer((req, res) => {
     const novaUrl = new URL(req.url, `http://${req.headers.host}`) //http://localhost
@@ -9,7 +14,15 @@ const server = http.createServer((req, res) => {
         res.statusCode = '201'
        //res.setHeader('Content-Type', 'text/plain')
         res.setHeader('Content-Type', 'text/html; charset=utf-8')
-        res.end('<h3>Bem-vindo à nossa página!</h3>')
+        res.end(fs.readFileSync(home, 'utf-8')) //chamar o html
+        return res.end(fs.readFileSync(home, 'utf-8')) //chamar o html
+    }
+        if(caminhoUrl === '/'){
+        res.statusCode = '201'
+       //res.setHeader('Content-Type', 'text/plain')
+        res.setHeader('Content-Type', 'text/html; charset=utf-8')
+        res.end(fs.readFileSync(sobre, 'utf-8')) //chamar o html
+         return res.end(fs.readFileSync(home, 'utf-8')) //chamar o html
     } else {
         res.statusCode = '404'
         res.setHeader('Content-Type', 'text/html; charset=utf-8')
