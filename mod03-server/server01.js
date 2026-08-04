@@ -14,14 +14,12 @@ const server = http.createServer((req, res) => {
         res.statusCode = '201'
        //res.setHeader('Content-Type', 'text/plain')
         res.setHeader('Content-Type', 'text/html; charset=utf-8')
-        res.end(fs.readFileSync(home, 'utf-8')) //chamar o html
         return res.end(fs.readFileSync(home, 'utf-8')) //chamar o html
     }
         if(caminhoUrl === '/'){
         res.statusCode = '201'
        //res.setHeader('Content-Type', 'text/plain')
         res.setHeader('Content-Type', 'text/html; charset=utf-8')
-        res.end(fs.readFileSync(sobre, 'utf-8')) //chamar o html
          return res.end(fs.readFileSync(home, 'utf-8')) //chamar o html
     } else {
         res.statusCode = '404'
