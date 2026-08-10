@@ -24,7 +24,7 @@ const server = http.createServer((req, res) => {
     } else {
         res.statusCode = '404'
         res.setHeader('Content-Type', 'text/html; charset=utf-8')
-        res.end('<h3>404 Página Não Encontrada</h3>')
+        res.end('<<h3>404 Página Não Encontrada</h3>>')
     }
 })
 
