@@ -33,7 +33,7 @@ const server = http.createServer((req, res) => {
     else {
         res.statusCode = '401'
         res.setHeader('Content-Type', 'text/html; charset=utf-8')
-        res.end('<h3>Página não encontrada</h3>')
+        res.end('<h3>pinto loco</h3>')
     }
 })
 
