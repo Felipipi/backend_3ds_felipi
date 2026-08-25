@@ -1,12 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Página Não Encontrada - Erro 404</title>
+    
+    <style>
+         /* Container das abas posicionado no topo */
+        .abas-container {
+            display: flex;
+            gap: 4px;
+            margin: 0 auto 40px auto;
+            border-bottom: 2px solid #e2e8f0;
+            width: 100%;
+            max-width: 600px;
+            justify-content: center;
+        }
+
+        /* Estilo base de cada aba */
+        .aba {
+            display: inline-block;
+            padding: 12px 24px;
+            text-decoration: none;
+            color: #64748b;
+            font-weight: 600;
+            font-size: 1rem;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            border: 1px solid transparent;
+            border-bottom: none;
+            margin-bottom: -2px; /* Encaixa perfeitamente na linha inferior */
+            transition: all 0.2s ease;
+        }
+
+        /* Efeito ao passar o mouse nas abas */
+        .aba:hover {
+            color: #3182ce;
+            background-color: #edf2f7;
+        }
+
+        /* Estado ativo/selecionado da aba */
+        .aba.ativa {
+            color: #3182ce;
+            background-color: #ffffff;
+            border-color: #e2e8f0;
+            border-bottom: 2px solid #ffffff; /* Cobre a linha do container */
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.02);
+        }
+
+        /* Estilos para o Botão Voltar */
+        .btn-voltar {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        }
+        
+        .btn-voltar:hover {
+            background-color: #f8fafc !important;
+            border-color: #cbd5e1 !important;
+            color: #0f172a !important;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+        }
+        
+        .btn-voltar:hover svg {
+            color: #1e293b !important;
+            transform: translateX(-2px);
+        }
+        
+        .btn-voltar:active {
+            transform: translateY(0);
+        }
+
+        /* Estilos para os Cards de Serviços */
+        .card-servico {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        }
+
+        .card-servico:hover {
+            transform: translateY(-6px);
+            border-color: #cbd5e1 !important;
+            box-shadow: 0 12px 20px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04) !important;
+        }
+    </style>
 </head>
-<body>
-    <h1>Erro 404</h1>
-    <p>Página não encontrada.</p>
+<body style="margin: 0; padding: 40px 20px; background-color: #f8fafc; color: #0f172a; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; flex-direction: column; min-height: 100vh; align-items: center; justify-content: flex-start; box-sizing: border-box; text-align: center;">
+
+    <!-- Menu de Abas no Topo -->
+    <div style="width: 100%; max-width: 1200px; margin-bottom: 40px;">
+        <div class="abas-container" style="margin-bottom: 0;">
+            <!-- Aba Início -->
+            <a href="/" class="aba ativa">Início</a>
+            
+            <!-- Aba Sobre Nós -->
+            <a href="/sobre" class="aba">Sobre Nós</a>
+            
+            <!-- Aba 404 Ativa -->
+            <a href="/erro" class="aba">404</a>
+        </div>
+    </div>
+
+    <!-- Centralizador vertical para o card de erro -->
+    <div style="flex: 1; display: flex; align-items: center; justify-content: center; width: 100%; padding-bottom: 40px;">
+        <div style="max-width: 450px; width: 100%; padding: 40px 20px; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.05);">
+            
+            <!-- Ícone Visual de Alerta -->
+            <div class="lupa-animada" style="font-size: 4rem; margin-bottom: 10px;">🔍</div>
+            
+            <!-- Código do Erro -->
+            <h1 style="margin: 0 0 10px 0; font-size: 4.5rem; font-weight: 800; line-height: 1; background: linear-gradient(135deg, #3b82f6, #1d4ed8); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                404
+            </h1>
+            
+            <!-- Mensagem de Erro -->
+            <p style="margin: 0 0 30px 0; font-size: 1.15rem; color: #64748b; font-weight: 500;">
+                Ops! A página que você está procurando não foi encontrada.
+            </p>
+            
+            <!-- Botão de Retorno -->
+            <a href="/" class="btn-retorno" style="display: inline-block; text-decoration: none; background-color: #2563eb; color: #ffffff; padding: 14px 28px; font-weight: 600; font-size: 1rem; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);">
+                Voltar para a página inicial
+            </a>
+            
+        </div>
+    </div>
+
 </body>
 </html>

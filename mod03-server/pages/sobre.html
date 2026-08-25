@@ -1,21 +1,155 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Nossos Serviços</title>
+    
+    <style>
+        /* Container das abas posicionado no topo */
+        .abas-container {
+            display: flex;
+            gap: 4px;
+            margin: 0 auto 40px auto;
+            border-bottom: 2px solid #e2e8f0;
+            width: 100%;
+            max-width: 600px;
+            justify-content: center;
+        }
+
+        /* Estilo base de cada aba */
+        .aba {
+            display: inline-block;
+            padding: 12px 24px;
+            text-decoration: none;
+            color: #64748b;
+            font-weight: 600;
+            font-size: 1rem;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            border: 1px solid transparent;
+            border-bottom: none;
+            margin-bottom: -2px; /* Encaixa perfeitamente na linha inferior */
+            transition: all 0.2s ease;
+        }
+
+        /* Efeito ao passar o mouse nas abas */
+        .aba:hover {
+            color: #3182ce;
+            background-color: #edf2f7;
+        }
+
+        /* Estado ativo/selecionado da aba */
+        .aba.ativa {
+            color: #3182ce;
+            background-color: #ffffff;
+            border-color: #e2e8f0;
+            border-bottom: 2px solid #ffffff; /* Cobre a linha do container */
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.02);
+        }
+
+        /* Estilos para o Botão Voltar */
+        .btn-voltar {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        }
+        
+        .btn-voltar:hover {
+            background-color: #f8fafc !important;
+            border-color: #cbd5e1 !important;
+            color: #0f172a !important;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+        }
+        
+        .btn-voltar:hover svg {
+            color: #1e293b !important;
+            transform: translateX(-2px);
+        }
+        
+        .btn-voltar:active {
+            transform: translateY(0);
+        }
+
+        /* Estilos para os Cards de Serviços */
+        .card-servico {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        }
+
+        .card-servico:hover {
+            transform: translateY(-6px);
+            border-color: #cbd5e1 !important;
+            box-shadow: 0 12px 20px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04) !important;
+        }
+    </style>
 </head>
-<body>
-           <a href='/'>Voltar a página inicial</a>
-        <h2>Somos uma loja de serviços necessários, como:<br>
-  <ul>
-    <li>Guincho</li>
-    <li>Chaveiro</li>
-    <li>Mecânica</li>
-    <li>Borracheiro</li>
-    <li>Encanador</li>
-    <li>Eletricista</li>
-  </ul>
- </h2> 
+<body style="margin: 0; padding: 40px 20px; background-color: #f8fafc; color: #0f172a; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; flex-direction: column; align-items: center; line-height: 1.6;">
+
+    <div style="max-width: 1200px; width: 100%; margin: 0 auto;">
+        
+        <!-- Menu de Abas no Topo -->
+        <div class="abas-container">
+            <!-- Aba Início -->
+            <a href="/" class="aba">Início</a>
+            
+            <!-- Aba Ativa: Sobre Nós -->
+            <a href="/sobre" class="aba ativa">Sobre Nós</a>
+            
+            <!-- Aba 404 -->
+            <a href="/erro" class="aba">404</a>
+        </div>
+  
+        <!-- Título Principal -->
+        <h2 style="font-size: 2rem; font-weight: 700; text-align: center; margin-bottom: 40px; color: #0f172a;">
+            Somos uma loja de serviços necessários, como:
+        </h2>
+        
+        <!-- Grid de Serviços -->
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 24px; width: 100%; justify-content: center;">
+            
+            <!-- Card 1: Guincho -->
+            <li class="card-servico" style="background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 30px 24px; width: calc(33.333% - 16px); min-width: 280px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); box-sizing: border-box;">
+                <div style="font-size: 2rem; margin-bottom: 12px;">🛞</div>
+                <div style="font-size: 1.25rem; font-weight: 600; margin-bottom: 8px;">Guincho</div>
+                <p style="margin: 0; font-size: 0.9rem; color: #64748b; font-weight: 400;">Remoção e transporte seguro para o seu veículo em qualquer situação de emergência.</p>
+            </li>
+
+            <!-- Card 2: Chaveiro -->
+            <li class="card-servico" style="background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 30px 24px; width: calc(33.333% - 16px); min-width: 280px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); box-sizing: border-box;">
+                <div style="font-size: 2rem; margin-bottom: 12px;">🔑</div>
+                <div style="font-size: 1.25rem; font-weight: 600; margin-bottom: 8px;">Chaveiro</div>
+                <p style="margin: 0; font-size: 0.9rem; color: #64748b; font-weight: 400;">Abertura de portas residenciais e automotivas, confecção e cópias de chaves.</p>
+            </li>
+
+            <!-- Card 3: Mecânica -->
+            <li class="card-servico" style="background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 30px 24px; width: calc(33.333% - 16px); min-width: 280px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); box-sizing: border-box;">
+                <div style="font-size: 2rem; margin-bottom: 12px;">👨‍🔧</div>
+                <div style="font-size: 1.25rem; font-weight: 600; margin-bottom: 8px;">Mecânica</div>
+                <p style="margin: 0; font-size: 0.9rem; color: #64748b; font-weight: 400;">Reparos do motor, suspensão, freios e diagnósticos preventivos completos.</p>
+            </li>
+
+            <!-- Card 4: Borracheiro -->
+            <li class="card-servico" style="background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 30px 24px; width: calc(33.333% - 16px); min-width: 280px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); box-sizing: border-box;">
+                <div style="font-size: 2rem; margin-bottom: 12px;">🔧</div>
+                <div style="font-size: 1.25rem; font-weight: 600; margin-bottom: 8px;">Borracheiro</div>
+                <p style="margin: 0; font-size: 0.9rem; color: #64748b; font-weight: 400;">Conserto de pneus furados, vulcanização, calibragem e troca de estepes.</p>
+            </li>
+
+            <!-- Card 5: Encanador -->
+            <li class="card-servico" style="background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 30px 24px; width: calc(33.333% - 16px); min-width: 280px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); box-sizing: border-box;">
+                <div style="font-size: 2rem; margin-bottom: 12px;">🪠</div>
+                <div style="font-size: 1.25rem; font-weight: 600; margin-bottom: 8px;">Encanador</div>
+                <p style="margin: 0; font-size: 0.9rem; color: #64748b; font-weight: 400;">Localização e conserto de vazamentos, desentupimentos e reparos hidráulicos.</p>
+            </li>
+
+            <!-- Card 6: Eletricista -->
+            <li class="card-servico" style="background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 30px 24px; width: calc(33.333% - 16px); min-width: 280px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); box-sizing: border-box;">
+                <div style="font-size: 2rem; margin-bottom: 12px;">⚡</div>
+                <div style="font-size: 1.25rem; font-weight: 600; margin-bottom: 8px;">Eletricista</div>
+                <p style="margin: 0; font-size: 0.9rem; color: #64748b; font-weight: 400;">Instalações elétricas, troca de disjuntores, chuveiros e manutenção geral.</p>
+            </li>
+
+        </ul>
+    </div>
+
 </body>
 </html>

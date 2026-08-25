@@ -1,16 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../public/estilo.css">
+    <title>Página Inicial</title>
+    
+    <style>
+         /* Container das abas posicionado no topo */
+        .abas-container {
+            display: flex;
+            gap: 4px;
+            margin: 0 auto 40px auto;
+            border-bottom: 2px solid #e2e8f0;
+            width: 100%;
+            max-width: 600px;
+            justify-content: center;
+        }
+
+        /* Estilo base de cada aba */
+        .aba {
+            display: inline-block;
+            padding: 12px 24px;
+            text-decoration: none;
+            color: #64748b;
+            font-weight: 600;
+            font-size: 1rem;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            border: 1px solid transparent;
+            border-bottom: none;
+            margin-bottom: -2px; /* Encaixa perfeitamente na linha inferior */
+            transition: all 0.2s ease;
+        }
+
+        /* Efeito ao passar o mouse nas abas */
+        .aba:hover {
+            color: #3182ce;
+            background-color: #edf2f7;
+        }
+
+        /* Estado ativo/selecionado da aba */
+        .aba.ativa {
+            color: #3182ce;
+            background-color: #ffffff;
+            border-color: #e2e8f0;
+            border-bottom: 2px solid #ffffff; /* Cobre a linha do container */
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.02);
+        }
+
+        /* Estilos para o Botão Principal */
+        .btn-principal {
+            display: inline-block; 
+            text-decoration: none; 
+            background-color: #2563eb; 
+            color: #ffffff; 
+            padding: 14px 28px; 
+            font-weight: 600; 
+            font-size: 1rem; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .btn-principal:hover {
+            background-color: #1d4ed8;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 15px rgba(37, 99, 235, 0.3);
+        }
+        
+        .btn-principal:active {
+            transform: translateY(0);
+        }
+    </style>
 </head>
-<body>
-  <h1>Bem-vindo à Nossa Página</h1>
-  <p>Esta é a página inicial do nosso site.</p>
-  <h3>-Obrigado pela preferência!</h3>
-  <h3>-Entre em contato através do e-mail: loja@hotmail.com</h3>
-  <a href="/sobre">Sobre Nós</a>
+<body style="margin: 0; padding: 40px 20px; background-color: #f8fafc; color: #0f172a; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; flex-direction: column; min-height: 100vh; align-items: center; justify-content: flex-start; box-sizing: border-box; text-align: center;">
+
+    <!-- Menu de Abas no Topo -->
+    <div style="width: 100%; max-width: 1200px; margin-bottom: 40px;">
+        <div class="abas-container" style="margin-bottom: 0;">
+            <!-- Aba Início Ativa -->
+            <a href="/" class="aba ativa">Início</a>
+            
+            <!-- Aba Sobre Nós -->
+            <a href="/sobre" class="aba">Sobre Nós</a>
+
+            <!-- Aba Erros -->
+            <a href="/erro" class="aba">404</a>
+        </div>
+    </div>
+
+    <!-- Centralizador vertical para o card principal -->
+    <div style="flex: 1; display: flex; align-items: center; justify-content: center; width: 100%; padding-bottom: 40px;">
+        <div style="max-width: 500px; width: 100%; padding: 40px 20px; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.05);">
+            
+            <!-- Ícone de Boas-vindas -->
+            <div style="font-size: 4rem; margin-bottom: 10px;">👋</div>
+            
+            <!-- Título da Página Inicial -->
+            <h1 style="margin: 0 0 15px 0; font-size: 2.5rem; font-weight: 800; line-height: 1.2; background: linear-gradient(135deg, #3b82f6, #1d4ed8); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                Bem-vindo!
+            </h1>
+            
+            <!-- Mensagem de Introdução -->
+            <p style="margin: 0 0 30px 0; font-size: 1.15rem; color: #64748b; font-weight: 500; line-height: 1.5;">
+                Esta é a sua nova página inicial. Aqui você pode apresentar sua plataforma, serviços ou os principais destaques do seu negócio.
+            </p>
+            
+            <!-- Botão de Ação -->
+            <a href="/sobre" class="btn-principal">
+                Conhecer Nossos Serviços
+            </a>
+            
+        </div>
+    </div>
+
 </body>
 </html>

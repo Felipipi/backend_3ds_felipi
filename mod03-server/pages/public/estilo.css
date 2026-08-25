@@ -1,0 +1,74 @@
+/* Configuração Geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Títulos e Textos */
+h1 {
+    color: #1a365d;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #4a5568;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #718096;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Link / Botão */
+a {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 28px;
+    /* Gradiente moderno em tons de azul */
+    background: linear-gradient(135deg, #3182ce, #2b6cb0);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    /* Sombra suave para dar profundidade */
+    box-shadow: 0 4px 6px rgba(49, 130, 206, 0.2);
+    /* Transição suave para todas as propriedades */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+a:hover {
+    /* Inverte sutilmente o gradiente */
+    background: linear-gradient(135deg, #2b6cb0, #1a365d);
+    /* Eleva o botão e expande a sombra (efeito de flutuar) */
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 8px 15px rgba(26, 54, 93, 0.3);
+}
+
+a:active {
+    /* Efeito de clique (afunda o botão) */
+    transform: translateY(-1px) scale(0.98);
+    box-shadow: 0 2px 4px rgba(26, 54, 93, 0.2);
+}
