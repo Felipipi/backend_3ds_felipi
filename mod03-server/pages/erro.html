@@ -48,37 +48,29 @@
             box-shadow: 0 -2px 4px rgba(0,0,0,0.02);
         }
 
-        /* Estilos para o Botão Voltar */
-        .btn-voltar {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        /* Estilos copiados do Botão Principal da Página Inicial */
+        .btn-principal {
+            display: inline-block; 
+            text-decoration: none; 
+            background-color: #2563eb; 
+            color: #ffffff; 
+            padding: 14px 28px; 
+            font-weight: 600; 
+            font-size: 1rem; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
-        .btn-voltar:hover {
-            background-color: #f8fafc !important;
-            border-color: #cbd5e1 !important;
-            color: #0f172a !important;
+        /* Efeito de hover copiado da Página Inicial */
+        .btn-principal:hover {
+            background-color: #1d4ed8;
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+            box-shadow: 0 8px 15px rgba(37, 99, 235, 0.3);
         }
         
-        .btn-voltar:hover svg {
-            color: #1e293b !important;
-            transform: translateX(-2px);
-        }
-        
-        .btn-voltar:active {
+        .btn-principal:active {
             transform: translateY(0);
-        }
-
-        /* Estilos para os Cards de Serviços */
-        .card-servico {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
-        }
-
-        .card-servico:hover {
-            transform: translateY(-6px);
-            border-color: #cbd5e1 !important;
-            box-shadow: 0 12px 20px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04) !important;
         }
     </style>
 </head>
@@ -88,22 +80,23 @@
     <div style="width: 100%; max-width: 1200px; margin-bottom: 40px;">
         <div class="abas-container" style="margin-bottom: 0;">
             <!-- Aba Início -->
-            <a href="/" class="aba ativa">Início</a>
+            <a href="/" class="aba">Início</a>
             
             <!-- Aba Sobre Nós -->
             <a href="/sobre" class="aba">Sobre Nós</a>
             
             <!-- Aba 404 Ativa -->
-            <a href="/erro" class="aba">404</a>
+            <a href="/erro" class="aba ativa">404</a>
         </div>
     </div>
 
     <!-- Centralizador vertical para o card de erro -->
     <div style="flex: 1; display: flex; align-items: center; justify-content: center; width: 100%; padding-bottom: 40px;">
-        <div style="max-width: 450px; width: 100%; padding: 40px 20px; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.05);">
+        <!-- Card limpo e estático de acordo com o padrão da Home -->
+        <div style="max-width: 500px; width: 100%; padding: 40px 20px; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.05);">
             
             <!-- Ícone Visual de Alerta -->
-            <div class="lupa-animada" style="font-size: 4rem; margin-bottom: 10px;">🔍</div>
+            <div style="font-size: 4rem; margin-bottom: 10px;">🔍</div>
             
             <!-- Código do Erro -->
             <h1 style="margin: 0 0 10px 0; font-size: 4.5rem; font-weight: 800; line-height: 1; background: linear-gradient(135deg, #3b82f6, #1d4ed8); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
@@ -111,13 +104,13 @@
             </h1>
             
             <!-- Mensagem de Erro -->
-            <p style="margin: 0 0 30px 0; font-size: 1.15rem; color: #64748b; font-weight: 500;">
+            <p style="margin: 0 0 30px 0; font-size: 1.15rem; color: #64748b; font-weight: 500; line-height: 1.5;">
                 Ops! A página que você está procurando não foi encontrada.
             </p>
             
-            <!-- Botão de Retorno -->
-            <a href="/" class="btn-retorno" style="display: inline-block; text-decoration: none; background-color: #2563eb; color: #ffffff; padding: 14px 28px; font-weight: 600; font-size: 1rem; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);">
-                Voltar para a página inicial
+            <!-- Botão com o efeito idêntico da Página Inicial aplicado -->
+            <a href="/inicio" class="btn-principal">
+                Voltar para a Página Inicial
             </a>
             
         </div>
