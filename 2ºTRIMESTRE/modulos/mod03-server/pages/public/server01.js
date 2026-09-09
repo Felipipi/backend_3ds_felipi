@@ -4,23 +4,23 @@ const fs = require('node:fs');
 
 const porta = 8081
 
-const inicio = path.join(__dirname, 'pages/inicio.html')
-const sobre = path.join(__dirname, 'pages/sobre.html')
-const erro = path.join(__dirname, 'pages/erro.html')
+const inicio = path.join(__dirname, 'pages/public/inicio.html')
+const sobre = path.join(__dirname, 'pages/public/sobre.html')
+const erro = path.join(__dirname, 'pages/public/erro.html')
 const css = path.join(__dirname, 'pages/public/estilo.css')
-const image = path.join(__dirname, 'pages/public/images/carro.png')
+const image = path.join(__dirname, 'pages/images/carro.png')
 
 const server = http.createServer((req, res) => {
     const novaUrl = new URL(req.url, `http://${req.headers.host}`) //http://localhost
     const caminhoUrl = novaUrl.pathname
 
-    if(caminhoUrl === '/public/estilo.css'){
+    if(caminhoUrl === 'pages/estilo.css'){
         res.statusCode = 200
         res.setHeader('Content-type', 'text/css')
         return res.end(fs.readFileSync(css))
     }
 
-    if(caminhoUrl === '/images/carro.png'){
+    if(caminhoUrl === 'images/carro.png'){
         res.statusCode = 200
         res.setHeader('Content-type', 'image/png')
         return res.end(fs.readFileSync(image))
