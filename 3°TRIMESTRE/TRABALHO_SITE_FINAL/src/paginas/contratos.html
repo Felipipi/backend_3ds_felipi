@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CryptoVerse - Contratos Inteligentes & DeFi</title>
+  
+  <!-- Fonte Inter do Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Ícones Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Arquivo CSS Externo -->
+  <link rel="stylesheet" href="../../css/index.css">
+</head>
+<body>
+
+  <!-- NAVEGAÇÃO -->
+  <nav class="navbar">
+    <div class="logo">
+      <div class="logo-placeholder">
+        <i class="fa-solid fa-cube"></i>
+      </div>
+      <span>CryptoVerse</span>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="/">Início</a></li>
+      <li><a href="/contratos" class="active">Contratos</a></li>
+      <li><a href="/suporte">Suporte</a></li>
+      <li><a href="/sobre">Sobre</a></li>
+    </ul>
+
+    <div class="nav-buttons">
+      <a href="/login" class="btn btn-outline">Entrar</a>
+      <a href="/register" class="btn btn-primary">Começar Agora</a>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION DE CONTRATOS -->
+  <section class="hero" id="contracts-hero">
+    <div class="hero-content">
+      <span class="badge"><i class="fa-solid fa-file-contract"></i> Smart Contracts Verificados</span>
+      <h1>Interaja com <span>Contratos Inteligentes</span> sem Complicação</h1>
+      <p>Gerencie seus protocolos de rendimento, e fetue o deploy de smart contracts e audite códigos de forma automatizada com a infraestrutura Web3 do CryptoVerse.</p>
+      
+      <div class="hero-actions">
+        <a href="#deploy" class="btn btn-primary btn-lg">Criar Novo Contrato</a>
+        <a href="#templates" class="btn btn-outline btn-lg"><i class="fa-solid fa-code"></i> Ver Templates</a>
+      </div>
+    </div>
+
+    <div class="hero-image-container">
+      <!-- PLACEHOLDER DA IMAGEM PRINCIPAL HERO DA PÁGINA DE CONTRATOS -->
+      <div class="image-placeholder main-hero-img">
+        <i class="fa-solid fa-code-commit"></i>
+        <span>[IMAGEM PRINCIPAL CONTRATOS - Ex: Editor de Código Web3 / 600x450px]</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO DE CONTRATOS POPULARES / PROTOCOLOS -->
+  <section class="market" id="templates">
+    <div class="section-header">
+      <h2>Templates de Contratos Populares</h2>
+      <p>Modelos auditados e prontos para implantação em múltiplas redes</p>
+    </div>
+
+    <div class="crypto-grid">
+      <!-- Card Contrato 1: Staking -->
+      <div class="crypto-card">
+        <div class="crypto-card-header">
+          <div class="crypto-icon-placeholder btc">
+            <i class="fa-solid fa-vault"></i>
+          </div>
+          <div>
+            <h3>Pool de Staking</h3>
+            <span class="symbol">ERC-20 / BEP-20</span>
+          </div>
+        </div>
+        <p style="font-size: 0.9rem; margin: 10px 0; opacity: 0.8;">Permita que seus usuários travem tokens para receber recompensas periódicas.</p>
+        <div class="change positive"><i class="fa-solid fa-shield-check"></i> Auditado por CertiK</div>
+      </div>
+
+      <!-- Card Contrato 2: NFT Minting -->
+      <div class="crypto-card">
+        <div class="crypto-card-header">
+          <div class="crypto-icon-placeholder eth">
+            <i class="fa-solid fa-layer-group"></i>
+          </div>
+          <div>
+            <h3>NFT Collection</h3>
+            <span class="symbol">ERC-721A</span>
+          </div>
+        </div>
+        <p style="font-size: 0.9rem; margin: 10px 0; opacity: 0.8;">Contrato otimizado para baixas taxas de gás em coleções de tokens não-fungíveis.</p>
+        <div class="change positive"><i class="fa-solid fa-bolt"></i> Otimização de Gás</div>
+      </div>
+
+      <!-- Card Contrato 3: DEX Liquidity -->
+      <div class="crypto-card">
+        <div class="crypto-card-header">
+          <div class="crypto-icon-placeholder sol">
+            <i class="fa-solid fa-arrow-rotate-left"></i>
+          </div>
+          <div>
+            <h3>Liquidity Swap</h3>
+            <span class="symbol">DeFi AMM</span>
+          </div>
+        </div>
+        <p style="font-size: 0.9rem; margin: 10px 0; opacity: 0.8;">Pools automatizados de liquidez para trocas diretas de tokens sem intermediários.</p>
+        <div class="change positive"><i class="fa-solid fa-lock"></i> Liquidez Bloqueável</div>
+      </div>
+
+      <!-- Card Contrato 4: Governance DAO -->
+      <div class="crypto-card">
+        <div class="crypto-card-header">
+          <div class="crypto-icon-placeholder ada">
+            <i class="fa-solid fa-check-to-slot"></i>
+          </div>
+          <div>
+            <h3>DAO Governance</h3>
+            <span class="symbol">Votação On-Chain</span>
+          </div>
+        </div>
+        <p style="font-size: 0.9rem; margin: 10px 0; opacity: 0.8;">Sistema de votação e tesouraria multi-assinatura para governança descentralizada.</p>
+        <div class="change positive"><i class="fa-solid fa-users"></i> Multi-Sig Ready</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO FERRAMENTAS & SEGURANÇA DOS CONTRATOS -->
+  <section class="features" id="features">
+    <div class="section-header">
+      <h2>Recursos do Desenvolvedor</h2>
+      <p>Ferramentas robustas para gerenciar o ciclo de vida do seu contrato inteligente</p>
+    </div>
+
+    <div class="features-grid">
+      <!-- Recurso 1 -->
+      <div class="feature-card">
+        <div class="image-placeholder feature-img">
+          <i class="fa-solid fa-bug-slash"></i>
+          <span>[IMAGEM AUDITORIA DE CÓDIGO]</span>
+        </div>
+        <h3>Auditoria Automatizada</h3>
+        <p>Análise estática contínua em busca de vulnerabilidades conhecidas antes de ir para a rede principal.</p>
+      </div>
+
+      <!-- Recurso 2 -->
+      <div class="feature-card">
+        <div class="image-placeholder feature-img">
+          <i class="fa-solid fa-network-wired"></i>
+          <span>[IMAGEM MULTI-CHAIN]</span>
+        </div>
+        <h3>Implantação Multi-Chain</h3>
+        <p>Faça o deploy do seu smart contract na Ethereum, Polygon, Solana, BNB Chain e Arbitrum em poucos cliques.</p>
+      </div>
+
+      <!-- Recurso 3 -->
+      <div class="feature-card">
+        <div class="image-placeholder feature-img">
+          <i class="fa-solid fa-chart-pie"></i>
+          <span>[IMAGEM MONITORAMENTO]</span>
+        </div>
+        <h3>Analytics On-Chain</h3>
+        <p>Acompanhe chamadas de funções, volume transacionado e métricas de uso do seu contrato em tempo real.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BANNER CTA DE DEPLOY -->
+  <section class="cta-banner" id="deploy">
+    <div class="cta-content">
+      <h2>Pronto para Lançar Seu Próprio Smart Contract?</h2>
+      <p>Acesse o ambiente de testes (Testnet), faça simulações sem gastar gás real e implante com segurança.</p>
+      <div class="store-buttons">
+        <a href="#" class="btn btn-primary"><i class="fa-solid fa-terminal"></i> Abrir IDE Web3</a>
+        <a href="#" class="btn btn-outline"><i class="fa-solid fa-book"></i> Documentação</a>
+      </div>
+    </div>
+
+    <div class="cta-image-container">
+      <div class="image-placeholder phone-mockup-img">
+        <i class="fa-solid fa-microchip"></i>
+        <span>[MOCKUP DO AMBIENTE DE DEPLOY - Ex: 300x500px]</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="logo">
+          <div class="logo-placeholder">
+            <i class="fa-solid fa-cube"></i>
+          </div>
+          <span>CryptoVerse</span>
+        </div>
+        <p>A plataforma mais confiável para negociação e gestão de criptoativos do futuro.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Plataforma</h4>
+        <ul>
+          <li><a href="#">Mercados</a></li>
+          <li><a href="#">Exchange</a></li>
+          <li><a href="#">Taxas</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>Suporte</h4>
+        <ul>
+          <li><a href="#">Central de Ajuda</a></li>
+          <li><a href="#">Contato</a></li>
+          <li><a href="#">Status do Sistema</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>Redes Sociais</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-discord"></i></a>
+          <a href="#"><i class="fa-brands fa-telegram"></i></a>
+          <a href="#"><i class="fa-brands fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 CryptoVerse. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

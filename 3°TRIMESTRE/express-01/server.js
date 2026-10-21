@@ -7,7 +7,7 @@ const baseDir = import.meta.dirname
 app.use(express.static(path.join(baseDir, 'src/public')))
 
 app.get('/', (req, res) => {
-    res.sendFile('src/pages/index.html', {root: baseDir})
+    res.sendFile('../../../src/pages/index.html', {root: baseDir})
 })
 
-app.listen(PORT, () => { console.log('Servidor Ok na porta' +PORT)})
+app.listen(PORT, () => { console.log('Servidor Ok na porta' + PORT)})
